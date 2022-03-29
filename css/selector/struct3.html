@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 첫번째 요소의 글자 색상은 red */
+      .fruits li:first-child {
+        color: red;
+      }
+
+      /* 마지막 요소의 글자 색상은 violet */
+      .fruits li:last-child {
+        color: violet;
+      }
+
+      /* 3번째 요소부터 그 이후의 요소들의 글자 색상은 blue */
+      .fruits li:nth-child(n+3) {
+        color: blue;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!--
+        css 선택자 (중요 - 자바스크립트에서도 사용)
+        1. 태그 선택자 : 태그명을 기준으로 설정 (가장 쉬움)
+        2. 전체 선택자 : body안 모든 태그를 의미(*)
+        3. 클래스 선택자 : 지정괸 클래스명을 가지고 있는 태그를 지정
+        4. 아이디 선택자 : 지정된 아이디명을 가지고 있는 태그를 지정
+        5. 자손(하위) 선택자 : 자손 태그를 지정 (공백)
+        6. 자식 선택자 : 자식 태그를 지정 ( > )
+        7. 형제 선택자 : 형제 태그를 지정 ( + or ~ ) 
+        8. 속성 선택자 : 속성 값을 가지고 있는 태그를 지정 ( [속성] )
+        9. 가상 클래스 선택자 : :link, :visited, :active, :hover, :focus .. 가상 클래스 지정
+        10. 가상 요소 선택자  : ::before, ::after
+        11. 구조 선택자 : 요소:first-child, 요소:last-child, 요소:nth-child()
+    -->
+    <h1 id="title">css 기본문법</h1>
+    <h2>구조 선택자</h2>
+    <ul class="fruits">
+      <li>딸기</li>
+      <li>사과</il>
+      <li>오렌지</li>
+      <li>망고</li>
+    </ul>
+  </body>
+</html>

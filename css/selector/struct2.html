@@ -4,15 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>자식 선택자</title>
+    <title>Document</title>
     <style>
-      div > h2 {
-        /* 한칸 띄우면 자손을 의미 */
-        color: orange;
-      }
-      div > nav > h2 {
-        /* 꺽쇠표시>는 자식을 의미 */
-        color: palegreen;
+      .fruits p:nth-child(1) {
+        color: palevioletred;
       }
     </style>
   </head>
@@ -25,17 +20,19 @@
         4. 아이디 선택자 : 지정된 아이디명을 가지고 있는 태그를 지정
         5. 자손(하위) 선택자 : 자손 태그를 지정 (공백)
         6. 자식 선택자 : 자식 태그를 지정 ( > )
+        7. 형제 선택자 : 형제 태그를 지정 ( + or ~ ) 
+        8. 속성 선택자 : 속성 값을 가지고 있는 태그를 지정 ( [속성] )
+        9. 가상 클래스 선택자 : :link, :visited, :active, :hover, :focus .. 가상 클래스 지정
+        10. 가상 요소 선택자  : ::before, ::after
+        11. 구조 선택자 : 요소:first-child, 요소:last-child, 요소:nth-child()
     -->
-    <div>
-      <h1>css 기본 문법</h1>
-      <h2>자식 선택자</h2>
-    </div>
-    <div>
-      <h1 id="title">자손(하위)선택자</h1>
-      <nav>
-        <h2>자손(하위) 선택자</h2>
-        <h2>자손(하위) 선택자</h2>
-      </nav>
-    </div>
+    <h1 id="title">css 기본문법</h1>
+    <h2>구조 선택자</h2>
+    <ul class="fruits">
+      <div>딸기</div>
+      <p>사과</p>
+      <p>오렌지</p>
+      <span>망고</span>
+    </ul>
   </body>
 </html>
