@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form6</title>
+  </head>
+  <body>
+    <form action="" method="get" novalidate>
+      <!-- validation : 유효성 검증
+                    요구한 형식과 사용자의 입력값이 다를 경우 검증
+           
+                    required : 무조건 사용자의 입력을 요구함
+           
+            email : 이메일 형식 확인 (간단한 형태의 확인)
+           
+            tel + pattern : pattern에 맞는 tel 이 들어왔는지 검증
+            number + min, max : min, max 범위 안의 숫자가 들어왔는지 검증
+           
+            form에서 novalidate : validation 제거
+        -->
+      <div>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" required />
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <!--search : 형태는 textbox랑 비슷
+                        but, search는 끝에 x모양이 있음.
+            
+                    -->
+        <label for="search">search</label>
+        <input type="search" name="search" id="search" />
+      </div>
+      <!--  date : 달력으로 날짜 선택
+            datetime : 직접 입력 (?)
+            datetime-local : 달력으로 날짜 선택 & 시간
+            month : 월 만 선택
+            time : 시간만 선택
+        -->
+      <div>
+        <label for="date1">date1</label>
+        <input type="date" name="date1" id="date1" />
+      </div>
+      <div>
+        <label for="date2">date2</label>d
+        <input type="datetime" name="date2" id="date2" />
+      </div>
+      <div>
+        <label for="date3">date3</label>
+        <input type="datetime-local" name="date3" id="date3" />
+      </div>
+      <div>
+        <label for="month">month</label>
+        <input type="month" name="month" id="month" />
+      </div>
+      <div>
+        <label for="time">time</label>
+        <input type="time" name="time" id="time" />
+      </div>
+      <div>
+        <label for="week">weel</label>
+        <input type="week" name="week" id="week" />
+      </div>
+      <div>
+        <label for="color">color</label>
+        <input type="color" name="color" id="color" />
+      </div>
+      <div>
+        <!--pattern : 정규식
+            [0-9]{3} - 0-9 사이의 숫자가 3자리 필요함
+            
+            [0-9]{4} - 0-9 사이의 숫자가 4자리 필요함
+        -->
+        <label for="tel">tel</label>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          pattern="[0-9]]{3}-[0-9]{4}-[0-9]{4}"
+        />
+      </div>
+      <div>
+        <label for="range">range</label>
+        <input type="range" name="range" id="range" min="1" max="10" step="1" />
+      </div>
+      <div>
+        <label for="number">number</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          min="80"
+          max="110"
+          step="5"
+        />
+      </div>
+      <div>
+        <label for="file">파일 선택</label>
+        <input type="file" name="file" id="file" accept="image/*" multiple />
+      </div>
+      <div>
+        <!--label로 input을 감쌀 수 있음.-->
+        <label>
+          이름
+          <input type="text" name="name" id="name" />
+        </label>
+      </div>
+      <div>
+        <button type="submit">보내기</button>
+        <button type="reset">삭제</button>
+      </div>
+    </form>
+  </body>
+</html>

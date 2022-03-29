@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form2</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="userid">아이디</label>
+        <input type="text" name="userid" id="userid" />
+        <!--name이라는 속성은 모든 태그에 다 사용 가능
+            입력 양식을 form 안에 만들면 무조건 name 써야함
+            일반적으로 name 이랑 id 는 동일하게 한다.-->
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="gender">성별</label>
+        <input
+          type="radio"
+          name="gender"
+          id="gender"
+          value="남자"
+          checked
+        />남자
+        <input type="radio" name="gender" id="gender_f" value="여자" />여자
+        <!--radio : user에게 여러개 중에 하나만 선택을 받아야 할 때.
+                - name : 동일한 이름을 부여
+                    name을 동일하게 하지 않으면 여러개 선택이 가능해짐
+                    (개별 요소로 인식)
+            id 는 동일하게 사용하지 X
+                - value : 선택했을 때 on / off 값이 아닌 다른 값이 목표
+            마우스로 선택하는 것들 (radio, checkbox)은 value 필수
+                - checked : 기본값(처음부터 선택해서 보여주고 싶을 때)
+            동그라미 모양
+            -->
+      </div>
+      <div>
+        <!-- checkbox : user에게 여러개 중에 하나이상 선택을 받아야 할 때.
+                - name : 서로 다르게 부여
+                 - value : 
+            네모 모양
+        -->
+        <label for="">과일 선택</label>
+        <input
+          type="checkbox"
+          name="apple"
+          id="apple"
+          value="사과"
+          checked
+        />사과
+        <input type="checkbox" name="grape" id="grape" value="포도" />포도
+        <input
+          type="checkbox"
+          name="strawberry"
+          id="strawberry"
+          value="딸기"
+        />딸기
+        <input type="checkbox" name="peach" id="peach" value="복숭아" />복숭아
+        <input type="checkbox" name="banana" id="banana" value="바나나" />바나나
+        <!-- checkbox : 다중 선택 가능-->
+      </div>
+    </form>
+  </body>
+</html>

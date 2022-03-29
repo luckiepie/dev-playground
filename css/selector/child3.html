@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자식 선택자</title>
+    <style>
+      div > h2 {
+        /* 한칸 띄우면 자손을 의미 */
+        color: orange;
+      }
+      div > nav > h2 {
+        color: palegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        css 선택자 (중요 - 자바스크립트에서도 사용)
+        1. 태그 선택자 : 태그명을 기준으로 설정 (가장 쉬움)
+        2. 전체 선택자 : body안 모든 태그를 의미(*)
+        3. 클래스 선택자 : 지정괸 클래스명을 가지고 있는 태그를 지정
+        4. 아이디 선택자 : 지정된 아이디명을 가지고 있는 태그를 지정
+        5. 자손(하위) 선택자 : 자손 태그를 지정 (공백)
+        6. 자식 선택자 : 자식 태그를 지정 ( > )
+    -->
+    <div>
+      <h1>css 기본 문법</h1>
+      <h2>자식 선택자</h2>
+    </div>
+    <div>
+      <h1 id="title">자손(하위)선택자</h1>
+      <nav>
+        <h2>자손(하위) 선택자</h2>
+        <h2>자손(하위) 선택자</h2>
+      </nav>
+    </div>
+  </body>
+</html>

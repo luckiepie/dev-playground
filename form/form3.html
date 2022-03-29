@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form3</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="userid">UserId</label>
+        <input type="text" name="userid" id="userid" />
+      </div>
+      <div>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="gender">성별</label>
+        <input type="radio" name="gender" id="gender" value="남자" />남
+        <input type="radio" name="gender" id="gender_f" value="여자" />여
+      </div>
+      <div>
+        <!--select : drop down list 
+                    열고 닫는 구조의 태그-->
+        <select name="fruit" id="fruit" size="5" multiple>
+          <!--value 중요!
+               selected : checkbox에서 checked와 같은 개념
+                           기본값
+         -->
+          <option value="사과">사과</option>
+          <option value="바나나">바나나</option>
+          <option value="딸기" selected>딸기</option>
+          <option value="포도">포도</option>
+        </select>
+      </div>
+      <div>
+        <!--textarea : 여러 줄로 입력
+                         열고 닫는 구조의 태그-->
+        <textarea name="info" id="" cols="30" rows="10">
+            하고 싶은 말
+        </textarea>
+      </div>
+      <div>
+        <!--submit : form을 action과 method 지정한 방식에 따라 서버로 전송
+            reset  : button 과 연결되어 있는 (form)양식을 초기화
+            button : 새로운 기능 정의할 때
+        -->
+        <input type="submit" value="보내기" />
+        <!--submit : 현재 form 을 전송하는 역할
+                     기능 O-->
+        <input type="reset" value="처음부터" />
+        <!--reset : form 안의 영역에 있는 정보들을 초기화
+                    기능 O -->
+        <input type="button" value="버튼" onclick="alert('hello world')" />
+        <!--button : 기능을 갖고 있진 않음.
+                     그냥 버튼 모양-->
+      </div>
+      <div>
+        <!--button 만드는 두 가지 방법
+                1) input
+                2) button 
+        -->
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button>
+        <button type="button" onclick="alert('hello world')">클릭</button>
+      </div>
+    </form>
+  </body>
+</html>

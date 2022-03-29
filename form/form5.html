@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품 주문서</title>
+  </head>
+  <body>
+    <h1>상품 주문서</h1>
+    <form action="" method="get">
+      <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <lavel for="username">이름</lavel>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="여백없이 입력"
+            />
+          </li>
+          <li>
+            <lavel for="usertel">전화번호</lavel>
+            <input
+              type="text"
+              name="usertel"
+              id="usertel"
+              placeholder="연락가능한 번호"
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>배송지 정보</legend>
+        <ul>
+          <li>
+            <lavel for="address">주소</lavel>
+            <input type="text" name="address" id="address" />
+          </li>
+          <li>
+            전화번호
+            <input type="text" name="telnum" id="telnum" />
+          </li>
+          <li>
+            메모
+            <textarea name="memo" id="memo" cols="30" rows="5"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+          <li>
+            <input
+              type="checkbox"
+              name="anti"
+              id="anti"
+              value="과테밀라"
+            />과테밀라 안티구아 (100g)
+            <input
+              type="text"
+              name="anti_num"
+              id="anti_num"
+              placeholder="0"
+              size="5"
+            />개
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="mandel"
+              id="mandel"
+              value="인도네시아"
+            />인도네시아 만델링 (100g)
+            <input
+              type="text"
+              name="mandel_num"
+              id="mandel_num"
+              placeholder="0"
+              size="5"
+            />개
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="doda"
+              id="doda"
+              value="탐라는"
+            />탐라는도다(블렌딩) (100g)
+            <input
+              type="text"
+              name="doda_num"
+              id="doda_num"
+              placeholder="0"
+              size="5"
+            />개
+          </li>
+        </ul>
+      </fieldset>
+      <div>
+        <button type="submit">주문하기</button>
+        <button type="reset">다시 작성</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data</title>
+  </head>
+  <body>
+    <!--전역속성 : 모든 태그에 사용할 수 있는 속성
+        1. class : 특정 값 부여(하나의 페이지에서 값은 중복될 수 있음)
+        2. id   : 특정 값 부여 (하나의 페이지에서 값이 중복되지 않음)
+        3. style : 특정 태그에 디자인을 부여
+        4. data-* : data-로 시작 (사용자 정의 데이터 속성 부여 / script에서 이용할 수 있는 정보를 저장하는 용도)
+                    소문자로 작성. 개발자 마음대로 이름 붙여도 됨. 
+    -->
+    <div id="me" data-my-age="851" data-my-name="admin">Admin</div>
+    <script>
+      const me = document.getElementById("me");
+      console.log(me.dataset.myname);
+      console.log(me.dataset.myAge);
+    </script>
+  </body>
+</html>
