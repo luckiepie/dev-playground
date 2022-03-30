@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float4</title>
+    <style>
+      p {
+        text-align: center;
+      }
+
+      p a {
+        background-color: palegoldenrod;
+        color: palevioletred;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-decoration: none;
+        line-height: 40px;
+      }
+      .hidden {
+        display: none;
+      }
+      div span {
+        background-color: lawngreen;
+        color: aliceblue;
+        float: left; /* block 요소로 바뀌면서 width height 적용됨*/
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+    </p>
+    <div class="hidden">Hidden Area</div>
+    <div>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </div>
+  </body>
+</html>
