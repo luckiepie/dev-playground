@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch1</title>
+  </head>
+  <body>
+    <script>
+      // 사용자에게 국어, 영어, 수학점수를 입력받아 평균 구하기
+      let kor = parseInt(prompt("국어 점수"));
+      let eng = Number(prompt("영어 점수"));
+      let math = Number(prompt("수학 점수"));
+
+      let average = (kor + eng + math) / 3;
+      alert(average);
+
+      // 평균이 90 이상이면 A, 80 이상이면 B,
+      // 70 이상이면 C, 나머지는 D
+      // switch
+
+      switch (parseInt(average / 10)) {
+        case 10:
+        case 9:
+          alert("A");
+          break;
+        case 8:
+          alert("B");
+          break;
+        case 7:
+          alert("C");
+          break;
+        default:
+          alert("D");
+          break;
+      }
+    </script>
+  </body>
+</html>
