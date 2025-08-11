@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery15</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="num1" id="" />
+        <select name="op" id="">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+        </select>
+        <input type="text" name="num1" id="" />
+        =
+        <input type="text" name="result" id="" />
+      </div>
+      <input type="button" value="계산" onclick="calc()" />
+    </form>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      // + : 문자열 연결
+      // parseInt(), Number()
+      // -, *, /, % => '3' * 4 = 12 (산술연산 가능)
+      function calc() {
+        // num1 값 가져오기
+        let num1 = Number($("[name = 'num1']").val());
+
+        // num2 값 가져오기
+        let num2 = Number($("[name = 'num2']").val());
+
+        // op 값 가져오기
+        let op = $("[name='op']").val();
+        let result;
+        // switch
+
+        switch (op) {
+          case "+":
+            result = num1 + num2;
+            break;
+          case "-":
+            result = num1 - num2;
+            break;
+          case "*":
+            result = num1 * num2;
+            break;
+          case "/":
+            result = num1 / num2;
+            break;
+          case "%":
+            result = num1 % num2;
+            break;
+        } // 연산 후 결과값 result 보여주기
+        $("[name='result']").val(result);
+      }
+    </script>
+  </body>
+</html>
