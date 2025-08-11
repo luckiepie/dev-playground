@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position1</title>
+    <style>
+      .grand-parent {
+        width: 800px;
+        height: 500px;
+        border: 2px solid lightgray;
+      }
+      .parent {
+        width: 500px;
+        height: 400px;
+        border: 2px dashed gray;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        font-size: 30px;
+        border: 1px solid black;
+        line-height: 100px;
+        text-align: center;
+      }
+      .fixed {
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--position : 배치 방법
+        1) static(기본) : 요소를 문서의 흐름에 맞게 배치
+        2) relative : 
+        3) absolute : 
+        4) fixed : 지정한 위치에 고정해 배치 (화면에서 요소가 잘릴 수도 있음)
+    
+    -->
+    <div class="grand-parent">
+      <div class="parent">
+        <div class="child">1</div>
+        <div class="child fixed">2</div>
+        <div class="child">3</div>
+      </div>
+    </div>
+  </body>
+</html>

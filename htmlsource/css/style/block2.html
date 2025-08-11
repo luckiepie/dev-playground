@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>block2</title>
+    <style>
+      div {
+        width: 100px; /* auto : 100% */
+        height: 50px; /* auto : 0% */
+        background-color: plum;
+
+        display: inline;
+      }
+      span {
+        width: 100px; /* auto : 컨텐츠 너비 */
+        height: 50px; /* auto : 컨텐츠 높이 */
+        background-color: palevioletred;
+
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+          block lebvel element 특징
+          width : 100%
+          height : 0에서 시작
+
+          inline level element 특징
+          width : 값을 가질 수 없음
+          height : 값을 가질 수 없음
+      -->
+    <div>내용</div>
+    <span>요소</span>
+  </body>
+</html>

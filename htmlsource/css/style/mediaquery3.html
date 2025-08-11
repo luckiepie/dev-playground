@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mediaquery3</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(9, 100, 199);
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1719px) {
+        .container {
+          width: 1710px;
+        }
+        .card {
+          width: 550px;
+          height: 250px;
+          margin: 10px;
+        }
+        .words {
+          width: 200px;
+          left: 310px;
+          top: 50px;
+          top: 50px;
+        }
+      }
+
+      @media screen and (min-width: 1720px) {
+        .container {
+          width: 570px;
+        }
+        .card {
+          width: 550px;
+          height: 250px;
+        }
+        .words {
+          width: 200px;
+          left: 310px;
+          top: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="images/1.jpg" alt="" />
+      <div class="words">
+        <h2>일 분 전만큼 먼 시간은 없다.</h2>
+        <h3>Jim Bishop</h3>
+      </div>
+      <img src="images/2.jpg" alt="" />
+      <div class="words">
+        <h2>웃음은 마음의 조깅이다.</h2>
+        <h3>-Normal Cousins</h3>
+      </div>
+      <img src="images/3.jpg" alt="" />
+      <div class="words">
+        <h2>낡은 옷은 그냥 입고 새 책을 사라</h2>
+        <h3>-Austin Phelps</h3>
+      </div>
+    </div>
+  </body>
+</html>

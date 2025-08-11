@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table2</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      table {
+        border-collapse: collapse;
+        /* 이웃하는 셀의 경계선을 합쳐서 단일선으로 표시 */
+
+        /* width: 100%; */
+        /* width: 800px; */
+      }
+      th {
+        /* height: 50px; */
+        text-align: left; /* 좌로 정렬 */
+        vertical-align: bottom; /* 세로 정렬 */
+      }
+      td,
+      th {
+        /* padding: 15px; 안쪽 여백 */
+        /* padding-left: 15px;
+        padding-bottom: 10px; */
+        padding: 20px 15px; /* 시계방향  top right bottom left */
+        /* 마주보는 애들끼리 같은 값을 갖는다. */
+        /* 히니로 주면 네 면의 모든 값이 같다. */
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+      </tr>
+
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+
+      <tr>
+        <td>Harry</td>
+        <td>Poter</td>
+      </tr>
+    </table>
+  </body>
+</html>

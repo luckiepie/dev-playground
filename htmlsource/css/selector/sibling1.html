@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sibling.html</title>
+    <style>
+      /*  + : h1 태그의 바로 다음에 오는 요소
+        div h1 + h2 {
+        color: orangered;
+      }
+
+            ~ :  h1 태그의 다음에 오는 모든 요소
+        div h1 ~ h2 {
+        color: orangered;
+      }
+        */
+      div h1 ~ h2 {
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        css 선택자 (중요 - 자바스크립트에서도 사용)
+        1. 태그 선택자 : 태그명을 기준으로 설정 (가장 쉬움)
+        2. 전체 선택자 : body안 모든 태그를 의미(*)
+        3. 클래스 선택자 : 지정괸 클래스명을 가지고 있는 태그를 지정
+        4. 아이디 선택자 : 지정된 아이디명을 가지고 있는 태그를 지정
+        5. 자손(하위) 선택자 : 자손 태그를 지정 (공백)
+        6. 자식 선택자 : 자식 태그를 지정 ( > )
+        7. 형제 선택자 : 형제 태그를 지정 ( + or ~ ) ( + : 바로 밑
+                                                     ~ : 밑에 있는 모든 것)
+    -->
+    <div>
+      <h1>CSS 기본 문법</h1>
+      <h2>형제 선택자</h2>
+      <h2>형제 선택자</h2>
+      <nav><h2>제목</h2></nav>
+    </div>
+  </body>
+</html>

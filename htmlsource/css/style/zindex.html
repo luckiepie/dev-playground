@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zindex</title>
+    <style>
+      .box-group .box {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: palegoldenrod;
+        border: 4px dashed purple;
+        border-radius: 10px;
+        font-size: 30px;
+        line-height: 100px;
+        text-align: center;
+        margin-right: -30px;
+      }
+      .box-group .box:nth-child(2n) {
+        margin-top: 30px;
+      }
+      .box3 {
+        position: relative;
+      }
+      .box4 {
+        position: relative;
+      }
+      .box5 {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+          z-index   : 요소 쌓는 순서 직접 지정
+                    : 숫자가 높을 수록 우선순위가 옾다.
+                    : postion이 지된 요소의 쌓임 절도를 양성
+
+      -->
+    <div class="box-group">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="box box5">5</div>
+    </div>
+    <!--box1,2,3,4,5의 우선순위
+        box 5 -> box4 -> box3 -> box 2
+    -->
+  </body>
+</html>

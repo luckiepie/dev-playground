@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 클래스 선택자</title>
+    <style>
+      a:link {
+        text-decoration: none;
+        /* 언더바 사라짐 */
+        outline: none; /*포커스를 받았을 때 진하게 변하는 것을 막음 */
+      }
+      a:visited {
+        color: rgb(225, 225, 204);
+      }
+      a:active {
+        color: #87cefa;
+      }
+      a:hover {
+        /* hover 앞에 a 적으면 a 위에 올릴 때에만 색깔 변함
+                        아무것도 안 붙이면 아무데나 마우스 올리면 바로 색깔 변함 */
+        color: #ff69b4;
+      }
+      h1:hover {
+        color: goldenrod;
+      }
+      input {
+        width: 150px;
+        border: 1px solid lightgray; /* 테두리 */
+        padding: 5px 10px; /* 시계방향으로 padding 적용됨, top -> right -> bottom -> left
+                            하나만 쓰면 위 아래 양 옆 다 적용
+                            두개 적으면 위 아래는 첫번째 값, 양 옆은 두번째 값으로 적용
+                            (마주보는 값이랑 같음) */
+        outline: none; /* 포커스를 바았을 때 진하게 표시되는 부분 막기 */
+        transition: 0.4s; /* 애니메이션
+                            부드럽게 늘어남. 늘어나는 속도 조절. */
+      }
+      input:focus {
+        width: 200px;
+        border-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        css 선택자 (중요 - 자바스크립트에서도 사용)
+        1. 태그 선택자 : 태그명을 기준으로 설정 (가장 쉬움)
+        2. 전체 선택자 : body안 모든 태그를 의미(*)
+        3. 클래스 선택자 : 지정괸 클래스명을 가지고 있는 태그를 지정
+        4. 아이디 선택자 : 지정된 아이디명을 가지고 있는 태그를 지정
+        5. 자손(하위) 선택자 : 자손 태그를 지정 (공백)
+        6. 자식 선택자 : 자식 태그를 지정 ( > )
+        7. 형제 선택자 : 형제 태그를 지정 ( + or ~ ) 
+        8. 속성 선택자 : 속성 값을 가지고 있는 태그를 지정 ( [속성] )
+        9. 가상 클래스 선택자 : :link, :visited, :active, :hover, :focus .. 가상 클래스 지정
+    -->
+    <div>
+      <h1>CSS 기본 문법</h1>
+      <h2>가상 클래스 선택자</h2>
+      <!--
+        :link       => 방문하지 않은 링크에 적용된 스타일
+        :visitied   => 방문하고 온 링크에 적용된 스타일
+        :active     => 요소를 활성화했을 때 (클릵하고 있을 떄) 스타일
+        :hover      => 요소에 마우스를 올려놓았을 때 스타일
+        :focus      => 요소가 포커스를 받았을 때 스타일
+
+        a태그에만 쓸 수 있는 개념은 아니고
+        다른 태그에도 적용 가능
+        but a태그의 속성이긴 함(?)
+    -->
+      <ul>
+        <li class="google">
+          <a href="#" target="_blank">google</a>
+        </li>
+        <li class="link1">
+          <a href="#" target="_blank">naver</a>
+        </li>
+        <li class="link2">
+          <a href="#" target="_self">daum</a>
+        </li>
+      </ul>
+      <a href="mailto:master@google.com">mailto:master@google.com</a>
+      <div>
+        <input type="text" />
+      </div>
+    </div>
+  </body>
+</html>

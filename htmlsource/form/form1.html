@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From1</title>
+  </head>
+  <body>
+    <!--form : 웹 서버에 정보를 제출하기 위한 양식의 범위를 정의하는 데 사용
+        action : 전송한 정보를 처리할 웹페이지의 URL (가야할 곳)
+        method : 서버로 전송할 http 방식(GET, POST) (method 작성 안하면 기본 방식인 get으로 설정됨)
+            - GET : 사용자가 작성한 값이 주소줄에 따라각는 것이 보임 (기본 방식)
+            - POST : 사용자가 작성한 값을 주소줄에서 알 수 없음
+        name : 이름
+        - action, method 는 필수/ name은 필수 아님
+        주소줄에서 ?붙으면 서버로 전송됐음을 의미
+        정보 전송은 get방식 (네이버에서 검색)
+        로그인 (아이디, 비밀번호, 회원가입 ...)은 post방식
+    -->
+    <!--  <form action="" method="get"> -->
+    <form action="" method="post" name="myform">
+      <!--전송할 정보-->
+      <div>
+        <label for="name"> 이름</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <input type="submit" value="보내기" />
+    </form>
+  </body>
+</html>
